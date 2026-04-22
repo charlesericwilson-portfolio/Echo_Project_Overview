@@ -55,14 +55,6 @@ Repo remains public and honest about its "in-testing" status.
 - **Practical LLM engineering** — Raw-text tool calling, domain-specific LoRA training, training data pipelines, and prompt engineering for reliable agent behavior
 - **Real-world constraints** — Designed to run entirely locally with low VRAM footprint while maintaining capability
 
-### Current Traction (as of April 20, 2026)
-
-- v1-v2 (early Python versions): 235 unique cloners + 4 YouTube refferals
-- v3 (Echo_tmux): 150 unique cloners
-- v4 (Python proxy): 139 unique cloners + 12 YouTube refferals
-- v5 (Rust hybrid proxy): 151 unique cloners + 14 YouTube refferals and 4 Google referrals
-- The [Echo training project](https://github.com/charlesericwilson-portfolio/Echo_training_project): 97 unique cloners + 1 youtube referral 
-
 Early interest is strongest in the simpler raw-text COMMAND and tmux-based versions. v5 is gaining traction quickly. We will be adding databases to v5 next then going to integrate lessons learned to the v4 python version soon.
 
 Future plans creating MLP routing for a Mixture of Adapters architecture.
