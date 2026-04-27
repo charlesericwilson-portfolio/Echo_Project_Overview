@@ -10,7 +10,7 @@ The entire stack runs on a **single consumer GPU** (~20 GB VRAM, 50k context). N
 
 I wanted a **local, capable, red-team-focused, general use AI** that could actually help me with real pentesting and system tasks, not just talk about them.
 
-So I started with a strong base model ([**Qwen 2.5 Coder 14B Instruct**](https://huggingface.co/Qwen/Qwen2.5-Coder-14B-Instruct)) and fine-tuned it using [**QLoRA**](https://github.com/charlesericwilson-portfolio/Echo_projectv0/blob/main/unsloth_train_gpt.py) on a custom dataset. Check it out here [Echo_training_project](https://github.com/charlesericwilson-portfolio/Echo_training_project)
+So I started with a strong base model [](https://huggingface.co/Qwen/Qwen2.5-Coder-14B-Instruct) and fine-tuned it using [**QLoRA**](https://github.com/charlesericwilson-portfolio/Echo_projectv0/blob/main/unsloth_train_gpt.py) on a custom dataset. Check it out here [Echo_training_project](https://github.com/charlesericwilson-portfolio/Echo_training_project)
 
 The training data focused heavily on:
 - Step-by-step reasoning and planning
@@ -54,11 +54,31 @@ Repo remains public and honest about its "in-testing" status.
 - **Systems programming** — Rust for performance-critical components + Python for rapid prototyping
 - **Practical LLM engineering** — Raw-text tool calling, domain-specific LoRA training, training data pipelines, and prompt engineering for reliable agent behavior
 - **Real-world constraints** — Designed to run entirely locally with low VRAM footprint while maintaining capability
+- **Remote + Local Hybrid Architecture** — Model can run on a remote server while tools execute on whatever device runs the wrapper (phone, laptop, desktop). Just tell Echo what environment it's running in (Windows or Linux).
 
-Early interest is strongest in the simpler raw-text COMMAND and tmux-based versions. v5 is gaining traction quickly. We will be adding databases to v5 next then going to integrate lessons learned to the v4 python version soon.
+### Platform Support
+
+- **Python wrapper (v4/v5):** Works on both Windows and Linux
+- **Rust versions (v1-v3):** Currently Linux-only (untested on Windows)
+- **Remote execution:** Works from any device that can run the wrapper via VPN. Tools execute on the device running the wrapper, not the model host.
+
+### Remote Execution
+
+Echo supports a **hybrid remote + local architecture**:
+
+- The **model** can live on a home server, VPS, or any always-on machine
+- The **wrapper** (Python or Rust) runs on whatever device you're using (phone, laptop, work computer)
+- **Tools execute on the device running the wrapper** — giving you full access to that machine's file system, terminal, and resources
+- Just tell Echo what environment it's running in (Windows or Linux) and it adapts automatically
+
+**Use case:** Connect to your home VPN from your phone or laptop, run the Echo wrapper locally, and it connects to your home model server while tools execute on your current device.
 
 Future plans creating MLP routing for a Mixture of Adapters architecture.
 
 Like Cameron Haynes says "Keep Hammering"
 
 All of this was done with collaboration from Grok by XAI
+
+---
+
+**Note:** This project is in active development. Some features are experimental and may require manual setup. The focus is on building practical, local-first agent tooling that actually works for real workflows.
