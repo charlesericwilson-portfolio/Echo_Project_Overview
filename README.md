@@ -29,21 +29,21 @@ I started with a simple idea and iteratively evolved it into a complete, self-im
 
 - **[v1 - Python Simple wrapper](https://github.com/charlesericwilson-portfolio/Echo_agentv1-2/tree/main/Echo_project/python_wrapper)**: The starting point — a basic COMMAND wrapper to give Echo tool-using ability.
 - **[v2 - Rust port of v1](https://github.com/charlesericwilson-portfolio/Echo_agentv1-2/tree/main/Echo_project/echo_rust_wrapper)**: A much faster and cleaner Rust port of the simple COMMAND method.
-- **[v3 - Rust tmux sessions](https://github.com/charlesericwilson-portfolio/Echo_tmux_agentv3)**: The current active version using tmux for reliable persistent sessions and cleaner output capture in testing.
-- **[v4 - Echo_python proxy](https://github.com/charlesericwilson-portfolio/Echo_agent_proxyv4)**: A much more complex version with persistent tmux sessions, heartbeat monitor, database, and summarizer in development.
-- **[v5 - Echo rust agent proxy](https://github.com/charlesericwilson-portfolio/Echo_rust_agent_proxy)**: The next evolution rust + tmux version of v4 in development.
+- **[v3 - Rust tmux sessions](https://github.com/charlesericwilson-portfolio/Echo_tmux_agentv3)**: The first iteration with persistent session support.
+- **[v4 - Echo_python proxy](https://github.com/charlesericwilson-portfolio/Echo_agent_proxyv4)**: A much more complex version with persistent tmux sessions, heartbeat output monitor, database, and summarizer. Requires alot of terminals to run moved to a rust implementation.
+- **[v5 - Echo rust agent proxy](https://github.com/charlesericwilson-portfolio/Echo_rust_agent_proxy)**: The next evolution rust + tmux version. Supports xml tool calling flags for shell and persistent sessions as well as Json function calling. Tool database support, context self summarization, and tool output summarization from a second smaller model.
 
-All of these projects exist for one reason: to give **Echo** (the fine-tuned LLM) the practical ability to use tools effectively and maintain state across sessions in a red-team-friendly or everyday use way.
+All of these projects exist for one reason: to give **Echo** (the fine-tuned LLM) the practical ability to use tools effectively and maintain state across sessions in a red-team-friendly or everyday use way, all local and all free of charge.
 
 ### Current Focus
 
 The latest development is in Rust because it runs significantly faster and gives better control and reliability. The goal is a clean, modular, and fast agent system that lets Echo do what it was trained for: real red team tasks, system interaction, and complex agent workflows.
 
-This journey started from a simple desire: build an AI that doesn't just talk about red teaming — it actually helps *do* it.
+This journey started from a simple desire: build an AI that doesn't just talk about red teaming and give how to's it actually helps *do* it.
 
 Feel free to explore the individual repos for code, technical details, and lessons learned along the way.
 
-Next focus remains on collecting high-quality SESSION vs COMMAND training examples from the current v4, v5 logs for a targeted LoRA.
+Next focus remains on collecting high-quality <session name= NAME> </session> vs <command> </command> training examples from the current v5 logs for a targeted LoRA.
 
 Repo remains public and honest about its "in-testing" status.
 
@@ -71,9 +71,10 @@ Echo supports a **hybrid remote + local architecture**:
 - **Tools execute on the device running the wrapper** — giving you full access to that machine's file system, terminal, and resources
 - Just tell Echo what environment it's running in (Windows or Linux) and it adapts automatically
 
-**Use case:** Connect to your home VPN from your phone or laptop, run the Echo wrapper locally, and it connects to your home model server while tools execute on your current device.
+**Use case:** Connect to your home VPN from your phone or laptop, run the Echo wrapper locally, and it connects to your home model server via setting the enpoint while tools execute on your current device.
 
-Future plans creating MLP routing for a Mixture of Adapters architecture.
+Functional prototype for MLP routing for a Mixture of Adapters architecture.
+Check it out here [MoAdapters](https://github.com/charlesericwilson-portfolio/mixture_of_adapters)
 
 Like Cameron Haynes says "Keep Hammering"
 
