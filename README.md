@@ -31,7 +31,7 @@ I started with a simple idea and iteratively evolved it into a complete, self-im
 - **[v2 - Rust port of v1](https://github.com/charlesericwilson-portfolio/Echo_agentv1-2/tree/main/Echo_project/echo_rust_wrapper)**: A much faster and cleaner Rust port of the simple COMMAND method.
 - **[v3 - Rust tmux sessions](https://github.com/charlesericwilson-portfolio/Echo_tmux_agentv3)**: The first iteration with persistent session support.
 - **[v4 - Echo_python proxy](https://github.com/charlesericwilson-portfolio/Echo_agent_proxyv4)**: A much more complex version with persistent tmux sessions, heartbeat output monitor, database, and summarizer. Requires alot of terminals to run moved to a rust implementation.
-- **[v5 - Echo rust agent proxy](https://github.com/charlesericwilson-portfolio/Echo_rust_agent_proxy)**: The next evolution rust + tmux version. Supports xml tool calling flags for shell and persistent sessions as well as Json function calling. Tool database support, context self summarization, and tool output summarization from a second smaller model.
+- **[v5 - Echo rust agent proxy](https://github.com/charlesericwilson-portfolio/Echo_Adapt_v5)**: The next evolution rust + tmux version. Supports xml tool calling flags for shell and persistent sessions as well as Json function calling. Tool database support, context self summarization, and tool output summarization from a second smaller model.
 
 All of these projects exist for one reason: to give **Echo** (the fine-tuned LLM) the practical ability to use tools effectively and maintain state across sessions in a red-team-friendly or everyday use way, all local and all free of charge.
 
