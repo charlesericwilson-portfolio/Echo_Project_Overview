@@ -73,7 +73,7 @@ Echo supports a **hybrid remote + local architecture**:
 
 **Use case:** Connect to your home VPN from your phone or laptop, run the Echo wrapper locally, and it connects to your home model server via setting the enpoint while tools execute on your current device.
 
-Functional prototype for MLP routing for a Mixture of Adapters architecture.
+Functional prototype for MLP routing for a Mixture of Adapters architecture. MLP router trained on model embedings takes the input and loads the aproapriate adapter out of four adapters for each prompt.
 Check it out here [MoAdapters](https://github.com/charlesericwilson-portfolio/mixture_of_adapters)
 
 Like Cameron Haynes says "Keep Hammering"
