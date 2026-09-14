@@ -992,7 +992,7 @@ The project remains experimental, open source, and intentionally transparent abo
 - [Echo ADAPT v3](https://github.com/charlesericwilson-portfolio/Echo_Adapt_v3)
 - [Echo Agent v4](https://github.com/charlesericwilson-portfolio/Echo_Agentv4)
 - [Echo ADAPT v5](https://github.com/charlesericwilson-portfolio/Echo_Adapt_v5)
-- [MoAdapters](https://github.com/charlesericwilson-portfolio/mixture_of_adapters)
+- [PES](https://github.com/charlesericwilson-portfolio/Persistent-Experiential-State--PES-)
 
 ---
 
